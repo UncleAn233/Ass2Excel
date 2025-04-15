@@ -1,0 +1,15 @@
+G:\Projects\Ass2Excel\Ass2Excel\bin\Debug\Ass2Excel.exe.config
+G:\Projects\Ass2Excel\Ass2Excel\bin\Debug\Ass2Excel.exe
+G:\Projects\Ass2Excel\Ass2Excel\bin\Debug\Ass2Excel.pdb
+G:\Projects\Ass2Excel\Ass2Excel\obj\Debug\Ass2Excel.csproj.AssemblyReference.cache
+G:\Projects\Ass2Excel\Ass2Excel\obj\Debug\Ass2Excel.Form1.resources
+G:\Projects\Ass2Excel\Ass2Excel\obj\Debug\Ass2Excel.Properties.Resources.resources
+G:\Projects\Ass2Excel\Ass2Excel\obj\Debug\Ass2Excel.csproj.GenerateResource.cache
+G:\Projects\Ass2Excel\Ass2Excel\obj\Debug\Ass2Excel.csproj.CoreCompileInputs.cache
+G:\Projects\Ass2Excel\Ass2Excel\obj\Debug\Ass2Excel.exe
+G:\Projects\Ass2Excel\Ass2Excel\obj\Debug\Ass2Excel.pdb
+G:\Projects\Ass2Excel\Ass2Excel\bin\Debug\DocumentFormat.OpenXml.dll
+G:\Projects\Ass2Excel\Ass2Excel\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+G:\Projects\Ass2Excel\Ass2Excel\bin\Debug\DocumentFormat.OpenXml.xml
+G:\Projects\Ass2Excel\Ass2Excel\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+G:\Projects\Ass2Excel\Ass2Excel\obj\Debug\Ass2Excel.csproj.Up2Date
