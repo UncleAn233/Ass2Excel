@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Office2010.ExcelAc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,19 +29,14 @@ namespace Ass2Excel
                 Warning.Text = "请拖入你的ass";
                 return;
             }
-            if(SpeakerTextBox.Text == "")
-            {
-                Warning.Text = "没填说话人";
-                return;
-            }
             if (OutputTextBox.Text == "")
             {
                 Warning.Text = "请选择输出路径";
                 return;
             }
 
-            var assReader = new AssReader(SpeakerTextBox.Text);
-            assReader.Read(path);
+            var assReader = new AssReader(path);
+            assReader.Read();
             var count = assReader.WriteExcel(OutputTextBox.Text, PathToFileName(path).Replace(".ass", ".xlsx"));
 
             Warning.Text = String.Format("成功，共写入{0}条——{1}", count, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
@@ -87,12 +83,18 @@ namespace Ass2Excel
                 return;
             }
 
-            SpeakerTextBox.Text = AssReader.GetSpeakersString(path);
+            Warning.Text = "Done";
         }
 
         private string PathToFileName(string path)
         {
             return path.Substring(path.LastIndexOf(@"\") + 1);
+        }
+
+        private void PreProcess(object sender, EventArgs e)
+        {
+            var speakers = AssReader.PrePorcess(path);
+            
         }
     }
 }

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.SpeakerTextBox = new System.Windows.Forms.TextBox();
-            this.Lavel1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.AssFileTextBox = new System.Windows.Forms.TextBox();
@@ -38,34 +36,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.Warning = new System.Windows.Forms.Label();
-            this.SpeakerButton = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(420, 179);
+            this.button1.Location = new System.Drawing.Point(423, 132);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "转换";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // SpeakerTextBox
-            // 
-            this.SpeakerTextBox.Location = new System.Drawing.Point(34, 95);
-            this.SpeakerTextBox.Name = "SpeakerTextBox";
-            this.SpeakerTextBox.Size = new System.Drawing.Size(380, 21);
-            this.SpeakerTextBox.TabIndex = 1;
-            // 
-            // Lavel1
-            // 
-            this.Lavel1.AutoSize = true;
-            this.Lavel1.Location = new System.Drawing.Point(34, 80);
-            this.Lavel1.Name = "Lavel1";
-            this.Lavel1.Size = new System.Drawing.Size(359, 12);
-            this.Lavel1.TabIndex = 2;
-            this.Lavel1.Text = "输入想摘取的说话人，用中文逗号区隔，不要出现[ABC，AB]的情况";
             // 
             // label1
             // 
@@ -94,7 +76,7 @@
             // 
             // OutputTextBox
             // 
-            this.OutputTextBox.Location = new System.Drawing.Point(33, 139);
+            this.OutputTextBox.Location = new System.Drawing.Point(33, 93);
             this.OutputTextBox.Name = "OutputTextBox";
             this.OutputTextBox.ReadOnly = true;
             this.OutputTextBox.Size = new System.Drawing.Size(381, 21);
@@ -103,7 +85,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 121);
+            this.label3.Location = new System.Drawing.Point(31, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 7;
@@ -111,7 +93,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(420, 139);
+            this.button2.Location = new System.Drawing.Point(423, 91);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(72, 23);
             this.button2.TabIndex = 8;
@@ -128,23 +110,23 @@
             this.Warning.Size = new System.Drawing.Size(0, 12);
             this.Warning.TabIndex = 9;
             // 
-            // SpeakerButton
+            // button3
             // 
-            this.SpeakerButton.Location = new System.Drawing.Point(417, 93);
-            this.SpeakerButton.Name = "SpeakerButton";
-            this.SpeakerButton.Size = new System.Drawing.Size(75, 23);
-            this.SpeakerButton.TabIndex = 10;
-            this.SpeakerButton.Text = "自动填充";
-            this.SpeakerButton.UseVisualStyleBackColor = true;
-            this.SpeakerButton.Click += new System.EventHandler(this.AutoGetSpeakers);
+            this.button3.Location = new System.Drawing.Point(324, 132);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "预处理";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.PreProcess);
             // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 227);
-            this.Controls.Add(this.SpeakerButton);
+            this.ClientSize = new System.Drawing.Size(513, 172);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.Warning);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -152,8 +134,6 @@
             this.Controls.Add(this.AssFileTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Lavel1);
-            this.Controls.Add(this.SpeakerTextBox);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "将Ass拖入这里";
@@ -168,8 +148,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox SpeakerTextBox;
-        private System.Windows.Forms.Label Lavel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox AssFileTextBox;
@@ -177,7 +155,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label Warning;
-        private System.Windows.Forms.Button SpeakerButton;
+        private System.Windows.Forms.Button button3;
     }
 }
 

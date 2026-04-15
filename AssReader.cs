@@ -16,20 +16,24 @@ namespace Ass2Excel
 
         private string pattern = @"(?<type>Dialogue|Comment): \d,(?<start>\d+:\d+:\d+\.\d+),(\d+:\d+:\d+\.\d+),\S*,(?<speaker>{0}),(\d+,\d+,\d+),.*?,(\{{.*\}})?(?<content>.*)";
 
+        private string _path;
+
         public List<AssLine> AssLines { get; private set; }
 
-        public AssReader(string speakers)
+        public AssReader(string path)
         {
-            var sp = speakers.Replace("，", "|");
-            pattern = String.Format(pattern, sp);
+            _path = path;
+            var speakers = AssReader.GetSpeakersString(path).Replace("，", "|");
+
+            pattern = String.Format(pattern, speakers);
             AssLines = new List<AssLine>();
         }
 
-        public void Read(string path)
+        public void Read()
         {
             List<string> result = new List<string>();
 
-            var sr = new StreamReader(path);
+            var sr = new StreamReader(_path);
             string line;
             while((line = sr.ReadLine()) != null)
             {
@@ -75,7 +79,7 @@ namespace Ass2Excel
                     );
                 sheetData.Append(headRow);
 
-                int count = 0;
+                //int count = 0;
                 for (var i = 0; i < AssLines.Count; i++)
                 {
                     Row row = new Row();
@@ -88,17 +92,6 @@ namespace Ass2Excel
                             CreateCell(String.Format("D{0}", i + 3), AssLines[i].Content, CellValues.String)
                             );
                     }
-
-                    else if (AssLines[i].Type == Comment)
-                    {
-                        count++;
-                        row.Append(
-                        CreateCell(String.Format("A{0}", i + 3), count, CellValues.Number),
-                        //CreateCell(String.Format("B{0}", i + 3), AssLines[i].Start, CellValues.String),
-                        CreateCell(String.Format("C{0}", i + 3), AssLines[i].Speaker, CellValues.String),
-                        CreateCell(String.Format("D{0}", i + 3), AssLines[i].Content, CellValues.String)
-                            );
-                    }
                     sheetData.Append(row);
                     Console.WriteLine("写入 " + AssLines[i].ToString());
                 }
@@ -109,6 +102,36 @@ namespace Ass2Excel
 
                 return AssLines.Count;
             }
+        }
+        public static HashSet<string> PrePorcess(string path)
+        {
+            var sr = new StreamReader(path);
+
+            string output = null;
+            var lines = File.ReadLines(path);
+            var speakers = new HashSet<string>();
+            foreach (var line in lines)
+            {
+                if (!line.StartsWith("Dialogue: "))
+                {
+                    output += line + "\n";
+                    continue;
+                }
+
+                var list = line.Split(',').ToList();
+                if (list[9].StartsWith("（"))
+                {
+                    var speaker = list[9].Substring(1, list[9].IndexOf("）") - 1);
+                    speakers.Add(speaker);
+                    list[4] = speaker;
+                    list[9] = list[9].Substring(list[9].IndexOf("）") + 1);
+                }
+                list[9] = list[9].Replace("\\N", " ").Replace("　", " ");
+                output += String.Join(",", list) + "\n";
+            }
+            File.WriteAllText(path.Replace(".ass", "(1).ass"), output);
+            sr.Close();
+            return speakers;
         }
 
         /// <summary>

@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Projects\\Ass2Excel\\Ass2Excel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E763DD5-B303-41BD-A297-95DACB201A89}|Ass2Excel.csproj|E:\\Projects\\Ass2Excel\\Ass2Excel\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E763DD5-B303-41BD-A297-95DACB201A89}|Ass2Excel.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E763DD5-B303-41BD-A297-95DACB201A89}|Ass2Excel.csproj|E:\\Projects\\Ass2Excel\\Ass2Excel\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1E763DD5-B303-41BD-A297-95DACB201A89}|Ass2Excel.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E763DD5-B303-41BD-A297-95DACB201A89}|Ass2Excel.csproj|e:\\projects\\ass2excel\\ass2excel\\assreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E763DD5-B303-41BD-A297-95DACB201A89}|Ass2Excel.csproj|solutionrelative:assreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\Projects\\Ass2Excel\\Ass2Excel\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "E:\\Projects\\Ass2Excel\\Ass2Excel\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAIwDsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T01:21:00.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AssReader.cs",
+              "DocumentMoniker": "E:\\Projects\\Ass2Excel\\Ass2Excel\\AssReader.cs",
+              "RelativeDocumentMoniker": "AssReader.cs",
+              "ToolTip": "E:\\Projects\\Ass2Excel\\Ass2Excel\\AssReader.cs",
+              "RelativeToolTip": "AssReader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T01:21:00.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "E:\\Projects\\Ass2Excel\\Ass2Excel\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "E:\\Projects\\Ass2Excel\\Ass2Excel\\Form1.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "Form1.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T01:21:01.05Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
